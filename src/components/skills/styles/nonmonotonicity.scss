@@ -1,0 +1,146 @@
+.large {
+	height: 260px;
+}
+
+.large.active {
+	height: 596px;
+}
+
+.section__nonmonotonicity {
+	position: relative;
+	padding: 1rem 0.5rem;
+	transition: all 0.5s;
+	background-color: var(--primary-bg);
+	overflow: hidden;
+	transition: all 0.3s;
+	border-bottom: 1px solid var(--second-bg-progress);
+	
+	.section__title,
+	.section__subtitle {
+		font-family: "OnestRegular";
+		margin-bottom: var(--mb-0-5);
+	}
+	.section__title {
+		display: flex;
+		align-items: center;
+		gap: 0.625rem;
+		font-size: var(--title-font-size);
+		line-height: 31px;
+
+		.dropdown {
+			height: 1.5rem;
+			width: 1.5rem;
+		}
+
+		.arrow {
+			background-repeat: no-repeat;
+			background-size: cover;
+			transition: all 0.5s;
+		}
+	}
+	
+	.section__subtitle {
+		font-size: var(--subtitle-font-size);
+		line-height: 25px;
+		color: #7c8eb5;
+		
+	}
+
+	.stats {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 2.625rem;
+
+		.progress-item {
+			position: relative;
+			width: 100%;
+			margin-bottom: var(--mb-0-375);
+
+
+			.left-side{
+
+				.progress-bar-result {
+					position: absolute;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+					top: 78px;
+					left: 38px;
+					width: 77px;
+					height: 36px;
+					transform: translateX(-50%);
+					transform: translateY(-50%);
+					font-family: "OnestBold";
+					font-size: 0.875rem;
+					line-height: 1.125rem;
+					
+					span {
+						text-transform: uppercase;
+						word-wrap: break-word;
+					}
+				}
+
+				.progress-bar-circle {
+					height: 135px;
+					width: 150px;
+
+					.percent {
+						position: relative;
+						width: 150px;
+						height: 150px;
+						transform: rotate(155deg);
+
+						svg {
+							position: relative;
+							width: 150px;
+							height: 150px;
+
+							circle {
+								width: 100%;
+								height: 100%;
+								fill: transparent;
+								stroke-width: 9px;
+							}
+						}
+					}
+				}
+			}
+
+			.right-side {
+				display: flex;
+				align-items: center;
+				flex-wrap: nowrap;
+				width: 217px;
+
+				.right-side-content-title {
+					width: 100%;
+					font-family: "OnestBold";
+					text-transform: uppercase;
+					font-size: 20px;
+					line-height: 25px;
+					margin-bottom: var(--mb-0-5);
+				}
+
+				.right-side-content-text {
+					display: inline-block;
+				}
+			}
+		}
+		
+		.border {
+			margin-bottom: 0;
+			display: flex;
+			gap: 0.5rem;
+			border-radius: 33px;
+			background: var(--secondary-bg);
+		}
+	}
+
+	.description {
+		position: absolute;
+		width: 100%;
+		height: 332.5px;
+		margin-top: 16px;
+	}
+} 
