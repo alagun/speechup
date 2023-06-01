@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import './components/skills/styles/nonmonotonicity.scss';
-import './components/progress/styles/originality.scss';
+import './components/progressCircle/styles/nonmonotonicity.scss';
+import './components/progressLine/styles/originality.scss';
 import App from './App';
 
 const root = ReactDOM.createRoot(
