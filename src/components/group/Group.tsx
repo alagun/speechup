@@ -1,16 +1,22 @@
 import React, { useState } from "react";
-import Progress from "../progress/Progress";
-import Skills from "../skills/Skills";
-import Description from "../Description/Description";
+import ProgressLine from "../progressLine/ProgressLine";
+import Skills from "../progressCircle/ProgressCircle";
+import Description from "../description/Description";
+import { IComponents } from "../../models";
+import { IDescription } from "../description/descriptionObj";
 
-export default function Group({ component }) {
-  let information;
-  if (component.component !== "skills") {
-    information = component.info.map((el, index) => (
-      <Progress key={index} obj={el} />
+interface IComponentProps {
+  component: IComponents
+}
+
+export default function Group(props:IComponentProps) {
+  let information:JSX.Element[];
+  if (props.component.component !== "skills") {
+    information = props.component.info.map((el:IDescription, index:number) => (
+      <ProgressLine key={index} info={el} />
     ));
   } else {
-    information = component.info.map((el, index) => (
+    information = props.component.info.map((el:IDescription, index:number) => (
       <Skills key={index} obj={el} />
     ));
   }
@@ -27,10 +33,11 @@ export default function Group({ component }) {
       setActive("active");
     }
   };
+  console.log(props.component.info)
   return (
     <div
       className={`section${
-        component.component !== "skills"
+        props.component.component !== "skills"
           ? "__originality small"
           : "__nonmonotonicity large"
       } ${active}`}
@@ -44,22 +51,22 @@ export default function Group({ component }) {
             transform: `rotate(${angle}deg)`,
           }}
         ></div>
-        <span>{component.title}</span>
+        <span>{props.component.title}</span>
       </div>
       <div className="section__subtitle">
-        <span>{component.subtitle}</span>
+        <span>{props.component.subtitle}</span>
       </div>
       <div
         className="stats"
         style={
-          component.component !== "skills"
+          props.component.component !== "skills"
             ? { gap: `2.625rem` }
             : { gap: `1rem`, marginTop: `1.6rem` }
         }
       >
         {information}
       </div>
-      <Description info={component.info} />
+      <Description info={props.component.info} />
     </div>
   );
 }

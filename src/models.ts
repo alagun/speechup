@@ -1,4 +1,4 @@
-import { IDescription } from "./components/Description/descriptionObj";
+import { IDescription } from "./components/description/descriptionObj";
 
 export interface IComponents {
 	component: string;

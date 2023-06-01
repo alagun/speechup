@@ -34,7 +34,7 @@ function App() {
       },
     ],
   });
-  let [component1, setComponent1] = useState({
+  let component1: IComponents =({
     component: "progress",
     title: "Оригинальность, заимствования и цитирование",
     subtitle: "Отношение параметров относительно общего объема текста.",
