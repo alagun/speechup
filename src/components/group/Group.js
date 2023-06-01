@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Progress from "../progress/Progress";
 import Skills from "../skills/Skills";
+import Description from "../Description/Description";
 
 export default function Group({ component }) {
-  let information = "";
+  let information;
   if (component.component !== "skills") {
     information = component.info.map((el, index) => (
       <Progress key={index} obj={el} />
@@ -58,50 +59,7 @@ export default function Group({ component }) {
       >
         {information}
       </div>
-      <div className="description">
-        <div className="description-item">
-          <h3 className="desritpion-title">{component.info[0].title}</h3>
-          <span className="desritpion-text">
-            {
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet suscipit cupiditate exercitationem blanditiis. Commodi, impedit sint eaque quibusdam quis debitis consectetur nostrum soluta sequi odit. Quas dicta vero dignissimos quo!"
-            }
-          </span>
-          <br />
-          <span className="desritpion-text">
-            {
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet suscipit cupiditate exercitationem blanditiis. Commodi, impedit sint eaque quibusdam quis debitis consectetur nostrum soluta sequi odit. Quas dicta vero dignissimos quo!"
-            }
-          </span>
-        </div>
-        <div className="description-item">
-          <h3 className="desritpion-title">{component.info[1].title}</h3>
-          <span className="desritpion-text">
-            {
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet suscipit cupiditate exercitationem blanditiis. Commodi, impedit sint eaque quibusdam quis debitis consectetur nostrum soluta sequi odit. Quas dicta vero dignissimos quo!"
-            }
-          </span>
-          <br />
-          <span className="desritpion-text">
-            {
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet suscipit cupiditate exercitationem blanditiis. Commodi, impedit sint eaque quibusdam quis debitis consectetur nostrum soluta sequi odit. Quas dicta vero dignissimos quo!"
-            }
-          </span>
-        </div>
-        <div className="description-item">
-          <h3 className="desritpion-title">{component.info[2].title}</h3>
-          <span className="desritpion-text">
-            {
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet suscipit cupiditate exercitationem blanditiis. Commodi, impedit sint eaque quibusdam quis debitis consectetur nostrum soluta sequi odit. Quas dicta vero dignissimos quo!"
-            }
-          </span>
-          <br />
-          <span className="desritpion-text">
-            {
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet suscipit cupiditate exercitationem blanditiis. Commodi, impedit sint eaque quibusdam quis debitis consectetur nostrum soluta sequi odit. Quas dicta vero dignissimos quo!"
-            }
-          </span>
-        </div>
-      </div>
+      <Description info={component.info} />
     </div>
   );
 }

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Group from "./components/group/Group";
+import { IComponents } from "./models";
 
 function App() {
-  let [component2, setComponent2] = useState({
+  let component2 : IComponents = ({
     component: "skills",
     title: "Немонотонность",
     subtitle: "Уровни параметров немонотонности",
