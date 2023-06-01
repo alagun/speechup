@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import ProgressLine from "../progressLine/ProgressLine";
 import Skills from "../progressCircle/ProgressCircle";
 import Description from "../description/Description";
-import { IComponents } from "../../models";
-import { IDescription } from "../description/descriptionObj";
+import { IComponents } from "../../interface/models";
+import { IDescription } from "../../interface/descriptionObj";
 
 interface IComponentProps {
   component: IComponents
@@ -17,7 +17,7 @@ export default function Group(props:IComponentProps) {
     ));
   } else {
     information = props.component.info.map((el:IDescription, index:number) => (
-      <Skills key={index} obj={el} />
+      <Skills key={index} info={el} />
     ));
   }
 
@@ -33,7 +33,6 @@ export default function Group(props:IComponentProps) {
       setActive("active");
     }
   };
-  console.log(props.component.info)
   return (
     <div
       className={`section${

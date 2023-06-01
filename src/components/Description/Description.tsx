@@ -1,5 +1,5 @@
 import React from 'react'
-import { IDescription } from './descriptionObj'
+import { IDescription } from '../../interface/descriptionObj'
 
 interface IDescriptionPropsArr {
   info: IDescription[]

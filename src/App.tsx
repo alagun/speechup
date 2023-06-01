@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Group from "./components/group/Group";
-import { IComponents } from "./models";
+import { IComponents } from "./interface/models";
 
 function App() {
   let component2 : IComponents = ({
@@ -10,6 +10,8 @@ function App() {
     info: [
       {
         title: "Темп речи",
+        subtitle: "Ваш теммп речи стабильный и динамичный.",
+        result: "норма",
         fill: "#2477F4",
         dotfill: "#2477F4",
         shadow: "0.663492px 0.663492px 3.4619px #2477F4",
@@ -18,6 +20,8 @@ function App() {
       },
       {
         title: "Громкость голоса",
+        subtitle: "Зафиксирована повышенная громкость голоса.",
+        result: "Слишком громко",
         fill: "#F35B60",
         dotfill: "#F35B60",
         img: "",
@@ -26,6 +30,8 @@ function App() {
       },
       {
         title: "Тон речи",
+        subtitle: "Ваш тон речи слишком низкий",
+        result: "Низкий",
         fill: "#37476A",
         dotfill: "#37476A",
         img: "",
@@ -41,6 +47,8 @@ function App() {
     info: [
       {
         title: "Оригинальность",
+        subtitle: "",
+        result: "",
         fill: "linear-gradient(212.08deg, #7C8EB5 0%, #37476A 100%)",
         dotfill: "linear-gradient(301.36deg, #7C8EB5 -30.27%, #37476A 119.56%)",
         shadow: "",
@@ -49,6 +57,8 @@ function App() {
       },
       {
         title: "Заимствования",
+        subtitle: "",
+        result: "",
         fill: "linear-gradient(32.08deg, #2477F4 0%, #3A86FA 100%)",
         dotfill: "linear-gradient(32.08deg, #2477F4 0%, #3A86FA 100%)",
         img: "./img/smallcaps.svg",
@@ -57,6 +67,8 @@ function App() {
       },
       {
         title: "Цитирование",
+        subtitle: "",
+        result: "",
         fill: "linear-gradient(225deg, #FFB800 0%, #FFB800 0.01%, #FF9900 100%)",
         dotfill: "#FFAA00",
         img: "./img/quote-down-square.svg",
